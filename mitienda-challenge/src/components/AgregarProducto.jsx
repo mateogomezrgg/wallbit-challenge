@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getProductsFakeStore } from '../helpers/getProductsFakeStore';
 
 export const AgregarProducto = () => {
   const [cantProducto, setCantProducto] = useState('');
@@ -6,8 +7,7 @@ export const AgregarProducto = () => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    console.log('cantidad de producto: ' + cantProducto);
-    console.log('id del producto: ' + idProducto);
+    getProductsFakeStore(idProducto, cantProducto);
   };
 
   return (

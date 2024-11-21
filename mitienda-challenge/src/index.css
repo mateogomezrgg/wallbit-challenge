@@ -90,9 +90,22 @@ input[type='number'] {
   padding: 10px;
   border: 1px solid wheat;
   color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .titulo__agregarProducto {
+  display: flex;
+  justify-content: center;
+}
+
+.carritoDeCompra {
+  padding: 10px;
+  border: 1px solid wheat;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.titulo__carritoDeCompra {
   display: flex;
   justify-content: center;
 }

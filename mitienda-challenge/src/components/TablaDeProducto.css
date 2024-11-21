@@ -1,0 +1,15 @@
+th {
+  border: '1px solid #ddd';
+  padding: '8px';
+  background-color: '#f4f4f4';
+  text-align: 'left';
+}
+
+td {
+  border: '1px solid #ddd';
+  padding: '8px';
+}
+
+tr {
+  text-align: 'left';
+}
