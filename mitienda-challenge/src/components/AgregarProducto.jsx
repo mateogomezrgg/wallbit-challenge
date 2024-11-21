@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { getProductsFakeStore } from '../helpers/getProductsFakeStore';
 
-export const AgregarProducto = () => {
+export const AgregarProducto = ({ productos, setProductos }) => {
   const [cantProducto, setCantProducto] = useState('');
   const [idProducto, setIdProducto] = useState('');
-  const onFormSubmit = (e) => {
+  
+  const onFormSubmit = async (e) => {
     e.preventDefault();
 
-    getProductsFakeStore(idProducto, cantProducto);
+    const data = await getProductsFakeStore(idProducto, cantProducto);
+    console.log('Entro', data)
+    
+    setProductos([...productos, data])
   };
 
   return (

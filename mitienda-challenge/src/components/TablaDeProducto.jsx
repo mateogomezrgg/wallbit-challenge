@@ -14,7 +14,7 @@ export const TablaDeProducto = ({ productos }) => {
           </tr>
         </thead>
         <tbody>
-          {Array.isArray(productos) && productos.length > 0 ? (
+          {
             productos.map((producto, index) => (
               <tr key={index}>
                 <td>{producto.cantidad}</td>
@@ -30,13 +30,7 @@ export const TablaDeProducto = ({ productos }) => {
                 </td>
               </tr>
             ))
-          ) : (
-            <tr>
-              <td colSpan='5' style={{ textAlign: 'center' }}>
-                No hay productos en el carrito.
-              </td>
-            </tr>
-          )}
+          }
         </tbody>
       </table>
     </div>
